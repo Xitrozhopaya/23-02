@@ -3,16 +3,11 @@ package JavaCore;
 import java.util.Random;
 
 public class Team {
-        /**
-         * 2. Добавить класс Team, который будет содержать: название команды, массив из 4-х участников
-         * (т.е. в конструкторе можно сразу всех участников указывать), метод для вывода информации о
-         * членах команды прошедших дистанцию, метод вывода информации обо всех членах команды.
-         */
         private String nameTeam = "Masha";
         Champions[] winers = {new Runner("Kate"), new Swimmer("Bob"), new Boxer("Pol")};
         public Champions[] teamChampions = new Champions[4];
         Random random = new Random();
-        // Формируем команду
+
         public Team(String nameTeam) {
             this.nameTeam = nameTeam;
             for(int i = 0; i < 4; i++){
@@ -20,7 +15,7 @@ public class Team {
                 teamChampions[i] = winers [ran];
             }
         }
-        // Вывод информации о членах команды
+
         public void printInformationAboutTheTeam() {
             System.out.println("Team: " + nameTeam);
             for(Champions a : teamChampions) {
@@ -33,7 +28,7 @@ public class Team {
             }
             System.out.println();
         }
-        // Вывод информации кто прошел дистанцию
+
         public void passedTheDistance(){
             System.out.println(nameTeam + "\n");
             for (Champions a : teamChampions){
